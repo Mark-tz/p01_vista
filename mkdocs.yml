@@ -1,0 +1,120 @@
+site_name: VISTA 智能巡检调度系统
+site_description: 四足机器人智能巡检调度平台技术文档
+site_author: VISTA Team
+site_url: https://vista-docs.readthedocs.io/
+
+repo_name: p01_vista
+# repo_url: https://github.com/your-org/p01_vista  # TODO: 替换为实际仓库地址
+
+copyright: Copyright &copy; 2026 VISTA Team
+
+theme:
+  name: material
+  language: zh
+  custom_dir: docs/overrides
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: 切换暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: 切换亮色模式
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
+  icon:
+    logo: material/robot-industrial
+    repo: fontawesome/brands/github
+
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-org/p01_vista
+      name: GitHub
+
+extra_css:
+  - assets/extra.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - tags
+
+nav:
+  - 首页: index.md
+  - 架构设计:
+      - 系统架构总览: 01-architecture-overview.md
+      - 技术选型说明: 02-technology-stack.md
+      - 部署架构: 06-deployment-architecture.md
+  - 详细设计:
+      - 模块详细设计: 03-module-design.md
+      - 数据库设计: 04-database-design.md
+      - 接口设计规范: 05-api-design.md
+  - 项目管理:
+      - 开发任务分解: 08-development-tasks.md
+      - Sprint 迭代计划: 09-sprint-plan.md
+      - 协作规范与工具链: 10-collaboration-guide.md
+  - 质量与运维:
+      - 非功能性需求: 07-non-functional-requirements.md

@@ -1,0 +1,41 @@
+/* VISTA 文档站自定义样式 */
+
+:root {
+  --md-primary-fg-color: #1a56db;
+}
+
+/* 首页卡片网格 */
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  transition: box-shadow 0.2s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* 代码块内的 ASCII 图表保持等宽 */
+.md-typeset pre code {
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", monospace;
+  font-size: 0.78em;
+  line-height: 1.5;
+}
+
+/* 表格全宽 */
+.md-typeset table:not([class]) {
+  display: table;
+  width: 100%;
+}
+
+/* 表头加深 */
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* admonition 微调 */
+.md-typeset .admonition {
+  font-size: 0.9rem;
+}
